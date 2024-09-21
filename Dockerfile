@@ -11,6 +11,8 @@ COPY package.json package-lock.json ./
 RUN npm install
 RUN npm install -g typescript
 RUN npm install -g ts-node
+RUN npm i -D typescript
+
 
 # Copia el resto del código de la aplicación
 COPY . .
