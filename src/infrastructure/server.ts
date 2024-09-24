@@ -16,6 +16,6 @@ app.get('/items', (req, res) => itemController.getAllItems(req, res));
 app.get('/items/:id', (req, res) => itemController.getItemById(req, res));
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
+export=app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });

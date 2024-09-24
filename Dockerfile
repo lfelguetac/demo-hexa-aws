@@ -1,5 +1,5 @@
 # Usa una imagen base oficial de Node.js
-FROM node:14
+FROM public.ecr.aws/lambda/nodejs:14
 
 # Establece el directorio de trabajo en /app
 WORKDIR /app
@@ -23,4 +23,4 @@ RUN npm run build
 EXPOSE 3000
 
 # Define el comando para ejecutar la aplicación
-CMD ["node", "dist/main.js"]
+CMD ["dist/main.handler"]
